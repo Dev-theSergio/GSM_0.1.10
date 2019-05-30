@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteX="8dp"
+    tools:layout_editor_absoluteY="8dp"
+    tools:context=".AboutActivity">
+
+    <RelativeLayout
+        android:id="@+id/RelativeAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/AboutLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:scaleType="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:src="@drawable/logo"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/AboutLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/AboutLogo"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/AboutInfoLabel"
+        android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/AboutInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/AboutLabel"
+            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/AboutInfo"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/AboutInfoCPU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/AboutInfo"
+            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/AboutInfoCPU"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/AboutLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/AboutInfoCPU"
+        android:layout_marginTop="10dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/AboutLink"
+        android:autoLink="web"/>
+
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/RelativeAbout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/bot_nav_width"
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bot_nav_width"
+        android:layout_alignParentBottom="true">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_navigation_about"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu="@menu/menu_main"
+            app:labelVisibilityMode="labeled"
+            android:background="@drawable/bot_nav_top"/>
+    </RelativeLayout>
+
+</RelativeLayout>

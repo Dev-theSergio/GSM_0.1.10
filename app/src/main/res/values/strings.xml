@@ -1,0 +1,171 @@
+<resources>
+    <string name="app_name">GSM Remote Control</string>
+
+    <string name="navigation_drawer_open">Открыто.</string>
+    <string name="navigation_drawer_close">Закрыто.</string>
+
+    <string name="Slave">Канал  </string>
+    <string name="buttonAllOn">All On</string>
+    <string name="buttonAllOff">All Off</string>
+    <string name="channelNumber">1</string>
+    <string name="Designator">идентификатор</string>
+
+    <string name="Home">Главная</string>
+    <string name="Settings">Настройки</string>
+    <string name="About">О программе</string>
+    <string name="Feedback">Отзыв</string>
+    <string name="Communication">Обратная связь</string>
+    <string name="MarketFeedback">Google Market</string>
+    <string name="Mode">Режимы</string>
+    <string name="Information">Запросы</string>
+    <string name="Instruction">Инструкция</string>
+    <string name="Event">События</string>
+
+    <string name="AddChannel">Добавить канал</string>
+    <string name="AllOn">Включить все каналы</string>
+    <string name="AllOff">Выключить все каналы</string>
+
+    <string name="SettingsMode">РЕЖИМ</string>
+    <string name="SettingsPhoneNumber">ОСНОВНЫЕ НОМЕРА</string>
+    <string name="SettingsGroup">ГРУППА</string>
+    <string name="SettingsGroupDeleteAll">УДАЛИТЬ ВСЕ</string>
+    <string name="SettingsPass">ПАРОЛЬ</string>
+    <string name="SettingsDateTime">ДАТА И ВРЕМЯ</string>
+    <string name="SettingsReset">СБРОС</string>
+
+    <string name="Install">Установить</string>
+    <string name="Save">Сохранить</string>
+    <string name="Inquiry">Запрос</string>
+    <string name="Send">Отправить</string>
+    <string name="Delete">Удалить</string>
+    <string name="DeleteAll">Удалить все</string>
+    <string name="Cancel">Отмена</string>
+
+    <string name="labelMPN">Мастер-номер</string>
+    <string name="labelSPN">Номер GSM устройства</string>
+    <string name="labelGPN_1">Номер участника группы</string>
+    <string name="labelGPN_2">Номер участника группы</string>
+    <string name="labelGPN_3">Номер участника группы</string>
+    <string name="labelTimeSet">Установка времени</string>
+    <string name="textTimeSet">Задать время GSM вручную</string>
+    <string name="labelDateSet">Установка даты</string>
+    <string name="textDateSet">Задать дату GSM вручную</string>
+    <string name="labelFactoryReset">Сброс настроек </string>
+    <string name="textFactoryReset">Сброс всех настроек и очистка памяти</string>
+    <string name="labelMasterReset">Сброс мастер-номера</string>
+    <string name="textMasterReset">Передача управления устройством</string>
+
+    <string name="phoneCode">+7</string>
+    <string name="colon">:</string>
+    <string name="error_phoneNumber">Неправильный формат номера.</string>
+    <string name="error_pass">Неправильный формат пароля.</string>
+
+    <string name="textHour">Часы</string>
+    <string name="textMinute">Минуты</string>
+    <string name="textSecond">Секунды</string>
+
+    <string name="notInstall">Не установлен</string>
+    <string name="AboutInfoLabel">KBRS Ltd. 2019</string>
+    <string name="AboutInfo">GSM Remote Control ver. 0.1.6 beta</string>
+    <string name="AboutInfoCPU">Firmware ver. GSM_1.0 </string>
+    <string name="AboutLink">www.kb-rs.com</string>
+    <string name="hintPressForEnter">Нажмите для ввода…</string>
+    <string name="DelayTime">Время задержки</string>
+    <string name="ModeChannel">Номер канала</string>
+    <string name="WeekDay">День недели</string>
+    <string name="TimeOfSwitchOn">Время включения</string>
+    <string name="TimeOfSwitchOff">Время выключения</string>
+    <string name="TurnOn">Включить</string>
+    <string name="TurnOff">Выключить</string>
+    <string name="TimeOfWork">Время работы</string>
+    <string name="QuantityOfRepeat">Количество повторений</string>
+    <string name="PeriodOfRepeat">Интервал повторений</string>
+    <string name="RadioButtonOn">Включение</string>
+    <string name="RadioButtonOff">Выключение</string>
+    <string name="InstallPass">Установленный пароль </string>
+    <string name="GuestMode">Режим участника группы </string>
+    <string name="SilentMode">Тихий режим </string>
+    <string name="SilentModeHint">При включении режима устройство не будет отправлять ответные SMS. </string>
+    <string name="BackgroundMode">Фоновый режим </string>
+    <string name="BackgroundModeHint">Доступ к фоновому режиму работы приложения для телефонов Xiaomi, Oppo, Vivo, LeTV, Honor.</string>
+
+    <string name="ScheduleMode">Вкючение режима </string>
+
+    <!--string name="InputCycWorkingTime">Введите время работы</string>
+    <string name="InputCycIntervalTime">Введите время интервала</string>
+
+    <string name="InputScheduleTimeOn">Введите время включения</string>
+    <string name="InputScheduleTimeOff">Введите время выключения</string>
+    <string name="InputScheduleDay">Выбирите день недели</string>
+    <string name="InputDelayTime">Введите время задержки</string>
+    <string name="InputScheduleWrongTime">Время выключения должно быть позднее времени включения.\nВведите корректное время выключения.</string-->
+
+    <string name="VoltageHighLevel">Верхний порог напряжения</string>
+    <string name="VoltageLowLevel">Нижний порог напряжения</string>
+    <string name="VoltagePower">Порог мощности</string>
+    <string name="VoltageTime">Время срабатывания защиты</string>
+
+    <string name="TemperatureHighLevel">Верхний порог температуры</string>
+    <string name="TemperatureLowLevel">Нижний порог температуры</string>
+
+    <string name="info_label_connect">Запрос состояния устройств</string>
+    <string name="info_label_count">Запрос количества устройств</string>
+    <string name="info_label_voltage">Запрос напряжения канала</string>
+    <string name="info_label_power">Запрос мощности канала</string>
+    <string name="info_label_net">Запрос уровеня GSM сигнала</string>
+    <string name="info_label_temperature">Запрос температуры</string>
+    <string name="info_label_voltage_param">Запрос параметров защиты (Напряжение)</string>
+    <string name="info_label_power_param">Запрос параметров защиты (Мощность)</string>
+    <string name="info_label_temp_param">Запрос параметров защиты (Температура)</string>
+
+    <string name="info_label_test">Тест</string>
+    <string name="RadioButtonInfoDialogMode_1">Верхний порог</string>
+    <string name="RadioButtonInfoDialogMode_2">Нижний порог</string>
+
+    <string name="hint_add_channel_description">Идентификатор</string>
+    <string name="hint_add_channel_number">Номер канала</string>
+    <string name="error_add_channel_number">Введите число от 4 до 25.</string>
+
+    <string name="SmsBody">Текст сообщения</string>
+    <string name="SmsDate">01–01–2019</string>
+    <string name="SmsTime">23:59</string>
+    <string name="DeleteAllSms">Очистить историю</string>
+
+    <!-- Remove or change this placeholder text -->
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+
+    <string-array name="WeekDays">
+        <item>Понедельник</item>
+        <item>Вторник</item>
+        <item>Среда</item>
+        <item>Четверг</item>
+        <item>Пятница</item>
+        <item>Суббота</item>
+        <item>Воскресенье</item>
+    </string-array>
+
+    <string-array name="WeekDaysNumber">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="ProtectMode">
+        <item>Верхний порог напряжения</item>
+        <item>Нижний порог напряжения</item>
+        <item>Порог мощности</item>
+    </string-array>
+
+
+    <!-- Example settings for Data & Sync -->
+
+    <!-- Example settings for Notifications -->
+
+</resources>

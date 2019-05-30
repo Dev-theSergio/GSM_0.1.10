@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorButton">#4286F5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#7d85f9</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#5d5c5c</color>
+    <color name="gray_light">#b0b0b0</color>
+    <color name="light_gray_settings">#e5e5e5</color>
+    <color name="gray_light_material">#e0e0e0</color>
+    <color name="material_gray_600">#757575</color>
+    <color name="color_icon_injury">#F29866</color>
+    <color name="color_icon_settings">#44B39F</color>
+
+
+
+</resources>
+
+<!-- <color name="colorPrimary">#2640cd</color> -->

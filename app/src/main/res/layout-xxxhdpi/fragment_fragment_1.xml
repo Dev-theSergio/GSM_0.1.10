@@ -1,0 +1,162 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.Fragment_1">
+
+    <ScrollView
+        android:id="@+id/ScrollModeDelay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/fragment_margin_bottom"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/info_layout_between">
+
+            <RelativeLayout
+                android:id="@+id/LinearDelayChannel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/start_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@drawable/back_linear_layout_top">
+
+                <TextView
+                    android:id="@+id/labelChannelDelay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/ModeChannel"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerDelayChannel"
+                    style="@android:style/Widget.DropDownItem.Spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelChannelDelay"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LinearDelaySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LinearDelayChannel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/linear_layout_between_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@color/white"
+                android:paddingStart="@dimen/linear_layout_start_end_padding"
+                android:paddingEnd="@dimen/linear_layout_start_end_padding">
+
+                <TextView
+                    android:id="@+id/labelTimeDelay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/DelayTime"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textDelayTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelTimeDelay"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/hintPressForEnter"
+                    android:textColor="@color/colorButton" />
+
+            </RelativeLayout>
+
+
+            <RadioGroup
+                android:id="@+id/radioGroupDelay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LinearDelaySpinner"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/linear_layout_between_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@drawable/back_linear_layout_bot"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <RadioButton
+                    android:id="@+id/radioDelayOn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/radio_button_start"
+                    android:baselineAligned="false"
+                    android:checked="true"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/RadioButtonOn"
+                    android:textColor="@color/material_gray_600"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radioDelayOff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="-32dp"
+                    android:layout_marginEnd="@dimen/radio_button_start"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/RadioButtonOff"
+                    android:textColor="@color/material_gray_600"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/RelativeButtonDelay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_margin_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/buttonDelaySend"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/button_margin_bottom"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:text="@string/Send"
+            android:textColor="@android:color/background_light"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

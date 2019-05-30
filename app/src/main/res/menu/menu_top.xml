@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+        <item
+            android:id="@+id/AddChannel"
+            android:orderInCategory="100"
+            android:title="@string/AddChannel"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/AllOn"
+            android:orderInCategory="100"
+            android:title="@string/AllOn"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/AllOff"
+            android:orderInCategory="100"
+            android:title="@string/AllOff"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/About"
+            android:orderInCategory="100"
+            android:title="@string/About"
+            app:showAsAction="never" />
+
+</menu>

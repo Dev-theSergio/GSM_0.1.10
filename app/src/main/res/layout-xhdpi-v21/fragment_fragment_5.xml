@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.Fragment_5">
+
+    <ScrollView
+        android:id="@+id/ScrollModeTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/fragment_margin_bottom"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/info_layout_between">
+
+            <RelativeLayout
+                android:id="@+id/RelativeTempMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/start_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@android:color/transparent"
+                android:elevation="@dimen/linear_layout_elevation"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/labelTempMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/settings_top_to_view_interval"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:text="@string/ScheduleMode"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="15sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <Switch
+                    android:id="@+id/switchTempMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/labelTempMode"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/background_switch"
+                    android:hapticFeedbackEnabled="true"
+                    android:padding="2dp"
+                    android:shadowRadius="5"
+                    android:track="@drawable/switch_track_selector" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/RelativeTemperatureChannel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeTempMode"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/start_margin_label"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@drawable/back_linear_layout_top"
+                android:elevation="@dimen/linear_layout_elevation"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/labelChannelTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/ModeChannel"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerTempChannel"
+                    style="@android:style/Widget.Material.DropDownItem.Spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelChannelTemp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeHighTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeTemperatureChannel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/linear_layout_between_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@color/white"
+                android:elevation="@dimen/linear_layout_elevation"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/labelHighTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/TemperatureHighLevel"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
+                    android:id="@+id/numberPickerHighTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelHighTemp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/number_picker_margin"
+                    android:layout_marginBottom="@dimen/number_picker_margin"
+                    android:background="@drawable/number_picker_bg_color"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:snp_buttonPaddingBottom="1dp"
+                    app:snp_buttonPaddingLeft="@dimen/snp_buttonPaddingLeftRight"
+                    app:snp_buttonPaddingRight="@dimen/snp_buttonPaddingLeftRight"
+                    app:snp_buttonTouchScaleFactor="2"
+                    app:snp_maxValue="100"
+                    app:snp_minValue="-55"
+                    app:snp_orientation="horizontal"
+                    app:snp_scrollEnabled="true"
+                    app:snp_stepSize="1"
+                    app:snp_updateInterval="10"
+                    app:snp_value="25"
+                    app:snp_valueMarginEnd="5dp"
+                    app:snp_valueMarginStart="5dp"
+                    app:snp_value_text_appearance="?android:attr/textAppearanceMedium"
+                    app:snp_value_text_color="@color/colorButton"
+                    app:snp_value_text_size="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeLowTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeHighTemp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/linear_layout_between_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@drawable/back_linear_layout_bot"
+                android:elevation="@dimen/linear_layout_elevation"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/labelLowTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/TemperatureLowLevel"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
+                    android:id="@+id/numberPickerLowTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelLowTemp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/number_picker_margin"
+                    android:layout_marginBottom="@dimen/number_picker_margin"
+                    android:background="@drawable/number_picker_bg_color"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:snp_buttonPaddingBottom="1dp"
+                    app:snp_buttonPaddingLeft="@dimen/snp_buttonPaddingLeftRight"
+                    app:snp_buttonPaddingRight="@dimen/snp_buttonPaddingLeftRight"
+                    app:snp_buttonTouchScaleFactor="2"
+                    app:snp_maxValue="100"
+                    app:snp_minValue="-55"
+                    app:snp_orientation="horizontal"
+                    app:snp_scrollEnabled="true"
+                    app:snp_stepSize="1"
+                    app:snp_updateInterval="10"
+                    app:snp_value="18"
+                    app:snp_valueMarginEnd="5dp"
+                    app:snp_valueMarginStart="5dp"
+                    app:snp_value_text_appearance="?android:attr/textAppearanceMedium"
+                    app:snp_value_text_color="@color/colorButton"
+                    app:snp_value_text_size="14sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/RelativeButtonTemp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_margin_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/buttonTemperatureMode"
+            android:layout_width="@dimen/button_width_dual"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/button_margin_start_end"
+            android:layout_marginBottom="@dimen/button_margin_bottom"
+            android:background="@drawable/rounded_button"
+            android:text="@string/TurnOn"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/buttonTemperature"
+            android:layout_width="@dimen/button_width_dual"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/button_margin_start_end"
+            android:layout_marginBottom="@dimen/button_margin_bottom"
+            android:background="@drawable/rounded_button"
+            android:text="@string/Install"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,334 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.Fragment_4">
+
+    <ScrollView
+        android:id="@+id/ScrollModeDefence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/fragment_margin_bottom"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/info_layout_between">
+
+            <RelativeLayout
+                android:id="@+id/RelativeVoltageSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/start_margin"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                tools:ignore="UselessParent">
+
+                <Spinner
+                    android:id="@+id/spinnerVoltage"
+                    style="@style/spinner_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background_spinner"
+                    android:entries="@array/ProtectMode"
+                    android:foregroundGravity="center_vertical|center"
+                    android:gravity="center_vertical"
+                    android:hapticFeedbackEnabled="true"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="40dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="0dp"
+                    android:paddingEnd="4dp"
+                    android:paddingBottom="4dp"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    android:src="@drawable/drop"
+                    tools:ignore="ContentDescription,RtlSymmetry" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/RelativeVoltageChannel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeVoltageSpinner"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/start_margin_label"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@drawable/back_linear_layout_top"
+                android:elevation="@dimen/linear_layout_elevation"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/labelChannelVoltage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/ModeChannel"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerVoltageChannel"
+                    style="@android:style/Widget.Material.DropDownItem.Spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelChannelVoltage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeVoltageTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeVoltageChannel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/linear_layout_between_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@color/white"
+                android:elevation="@dimen/linear_layout_elevation"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/labelVoltageTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/VoltageTime"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
+                    android:id="@+id/numberPickerVoltageTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelVoltageTime"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:layout_marginBottom="@dimen/number_picker_margin"
+                    android:background="@drawable/number_picker_bg_color"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:snp_buttonPaddingBottom="1dp"
+                    app:snp_buttonPaddingLeft="@dimen/snp_buttonPaddingLeftRight"
+                    app:snp_buttonPaddingRight="@dimen/snp_buttonPaddingLeftRight"
+                    app:snp_buttonTouchScaleFactor="2"
+                    app:snp_maxValue="255"
+                    app:snp_minValue="0"
+                    app:snp_orientation="horizontal"
+                    app:snp_scrollEnabled="true"
+                    app:snp_stepSize="1"
+                    app:snp_updateInterval="10"
+                    app:snp_value="0"
+                    app:snp_valueMarginEnd="5dp"
+                    app:snp_valueMarginStart="5dp"
+                    app:snp_value_text_appearance="?android:attr/textAppearanceMedium"
+                    app:snp_value_text_color="@color/colorButton"
+                    app:snp_value_text_size="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeVoltageHighLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeVoltageTime"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/linear_layout_between_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@drawable/back_linear_layout_top"
+                android:elevation="@dimen/linear_layout_elevation"
+                tools:ignore="UselessParent">
+
+
+                <TextView
+                    android:id="@+id/labelVoltageHighLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/VoltageHighLevel"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
+                    android:id="@+id/numberPickerVoltageHighLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelVoltageHighLevel"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/number_picker_margin"
+                    android:layout_marginBottom="@dimen/number_picker_margin"
+                    android:background="@drawable/number_picker_bg_color"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:snp_buttonPaddingBottom="1dp"
+                    app:snp_buttonPaddingLeft="@dimen/snp_buttonPaddingLeftRight"
+                    app:snp_buttonPaddingRight="@dimen/snp_buttonPaddingLeftRight"
+                    app:snp_buttonTouchScaleFactor="2"
+                    app:snp_maxValue="290"
+                    app:snp_minValue="245"
+                    app:snp_orientation="horizontal"
+                    app:snp_scrollEnabled="true"
+                    app:snp_stepSize="1"
+                    app:snp_updateInterval="10"
+                    app:snp_value="265"
+                    app:snp_valueMarginEnd="5dp"
+                    app:snp_valueMarginStart="5dp"
+                    app:snp_value_text_appearance="?android:attr/textAppearanceMedium"
+                    app:snp_value_text_color="@color/colorButton"
+                    app:snp_value_text_size="14sp" />
+
+                <TextView
+                    android:id="@+id/labelVoltageLowLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:enabled="false"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/VoltageLowLevel"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+
+                <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
+                    android:id="@+id/numberPickerVoltageLowLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelVoltageLowLevel"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/number_picker_margin"
+                    android:layout_marginBottom="@dimen/number_picker_margin"
+                    android:background="@drawable/number_picker_bg_color"
+                    android:orientation="horizontal"
+                    android:visibility="invisible"
+                    app:snp_buttonPaddingBottom="1dp"
+                    app:snp_buttonPaddingLeft="@dimen/snp_buttonPaddingLeftRight"
+                    app:snp_buttonPaddingRight="@dimen/snp_buttonPaddingLeftRight"
+                    app:snp_buttonTouchScaleFactor="2"
+                    app:snp_maxValue="210"
+                    app:snp_minValue="120"
+                    app:snp_orientation="horizontal"
+                    app:snp_scrollEnabled="true"
+                    app:snp_stepSize="1"
+                    app:snp_updateInterval="10"
+                    app:snp_value="180"
+                    app:snp_valueMarginEnd="5dp"
+                    app:snp_valueMarginStart="5dp"
+                    app:snp_value_text_appearance="?android:attr/textAppearanceMedium"
+                    app:snp_value_text_color="@color/colorButton"
+                    app:snp_value_text_size="14sp" />
+
+                <TextView
+                    android:id="@+id/labelVoltagePower"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:enabled="false"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/VoltagePower"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+
+                <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
+                    android:id="@+id/numberPickerVoltagePower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelVoltagePower"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/number_picker_margin"
+                    android:layout_marginBottom="@dimen/number_picker_margin"
+                    android:background="@drawable/number_picker_bg_color"
+                    android:orientation="horizontal"
+                    android:visibility="invisible"
+                    app:snp_buttonPaddingBottom="1dp"
+                    app:snp_buttonPaddingLeft="@dimen/snp_buttonPaddingLeftRight"
+                    app:snp_buttonPaddingRight="@dimen/snp_buttonPaddingLeftRight"
+                    app:snp_buttonTouchScaleFactor="2"
+                    app:snp_maxValue="3500"
+                    app:snp_minValue="50"
+                    app:snp_orientation="horizontal"
+                    app:snp_scrollEnabled="true"
+                    app:snp_stepSize="50"
+                    app:snp_updateInterval="10"
+                    app:snp_value="50"
+                    app:snp_valueMarginEnd="5dp"
+                    app:snp_valueMarginStart="5dp"
+                    app:snp_value_text_appearance="?android:attr/textAppearanceMedium"
+                    app:snp_value_text_color="@color/colorButton"
+                    app:snp_value_text_size="14sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/RelativeButtonDefence"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_margin_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/buttonVoltage"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/button_margin_bottom"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:text="@string/Send"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

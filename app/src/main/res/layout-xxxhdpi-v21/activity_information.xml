@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Information"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/bot_nav_width">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/info_layout_between">
+
+            <RelativeLayout
+                android:id="@+id/RelativeInfoConnectDevices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/info_layout_padding_left_right"
+                android:layout_marginTop="@dimen/info_layout_between"
+                android:layout_marginRight="@dimen/info_layout_padding_left_right"
+                android:background="@drawable/background_linear_layout"
+                android:elevation="@dimen/linear_layout_elevation"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_condition_channel_24dp"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/info_label_connect"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeInfoSlave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeInfoConnectDevices"
+                android:layout_alignParentEnd="false"
+                android:layout_marginLeft="@dimen/info_layout_padding_left_right"
+                android:layout_marginTop="@dimen/info_layout_between"
+                android:layout_marginRight="@dimen/info_layout_padding_left_right"
+                android:background="@drawable/background_linear_layout"
+                android:elevation="@dimen/linear_layout_elevation"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_plug_24px"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/info_label_count"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeInfoNet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeInfoSlave"
+                android:layout_marginLeft="@dimen/info_layout_padding_left_right"
+                android:layout_marginTop="@dimen/info_layout_between"
+                android:layout_marginRight="@dimen/info_layout_padding_left_right"
+                android:background="@drawable/background_linear_layout"
+                android:elevation="@dimen/linear_layout_elevation"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_network_check_24dp"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/info_label_net"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeInfoTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeInfoPower"
+                android:layout_alignParentEnd="false"
+                android:layout_marginLeft="@dimen/info_layout_padding_left_right"
+                android:layout_marginTop="@dimen/info_layout_between"
+                android:layout_marginRight="@dimen/info_layout_padding_left_right"
+                android:background="@drawable/background_linear_layout"
+                android:elevation="@dimen/linear_layout_elevation"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/labelInfoTemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_t_24px"
+                    android:drawablePadding="14dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/info_label_temperature"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeInfoVoltage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeInfoNet"
+                android:layout_marginLeft="@dimen/info_layout_padding_left_right"
+                android:layout_marginTop="@dimen/info_layout_between"
+                android:layout_marginRight="@dimen/info_layout_padding_left_right"
+                android:background="@drawable/background_linear_layout"
+                android:elevation="@dimen/linear_layout_elevation"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/labelInfoVoltage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="false"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_u_24px"
+                    android:drawablePadding="14dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/info_label_voltage"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeInfoPower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeInfoVoltage"
+                android:layout_alignParentEnd="false"
+                android:layout_marginLeft="@dimen/info_layout_padding_left_right"
+                android:layout_marginTop="@dimen/info_layout_between"
+                android:layout_marginRight="@dimen/info_layout_padding_left_right"
+                android:background="@drawable/background_linear_layout"
+                android:elevation="@dimen/linear_layout_elevation"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/labelInfoPower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_p_24px"
+                    android:drawablePadding="14dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/info_label_power"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeInfoVoltageDefParam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeInfoTemp"
+                android:layout_marginLeft="@dimen/info_layout_padding_left_right"
+                android:layout_marginTop="@dimen/info_layout_between"
+                android:layout_marginRight="@dimen/info_layout_padding_left_right"
+                android:background="@drawable/background_linear_layout"
+                android:elevation="@dimen/linear_layout_elevation"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/labelInfoVoltageDefParam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="false"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_shield_u_24px"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/info_label_voltage_param"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeInfoPowerDefParam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeInfoVoltageDefParam"
+                android:layout_alignParentEnd="false"
+                android:layout_marginLeft="@dimen/info_layout_padding_left_right"
+                android:layout_marginTop="@dimen/info_layout_between"
+                android:layout_marginRight="@dimen/info_layout_padding_left_right"
+                android:background="@drawable/background_linear_layout"
+                android:elevation="@dimen/linear_layout_elevation"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/labelInfoPowerDefParam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="false"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_shield_p_24px"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/info_label_power_param"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeInfoTempDefParam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeInfoPowerDefParam"
+                android:layout_marginLeft="@dimen/info_layout_padding_left_right"
+                android:layout_marginTop="@dimen/info_layout_between"
+                android:layout_marginRight="@dimen/info_layout_padding_left_right"
+                android:background="@drawable/background_linear_layout"
+                android:elevation="@dimen/linear_layout_elevation"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/labelInfoTempDefParam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="false"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_shield_t_24px"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/info_label_temp_param"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap"
+                    android:gravity="center_vertical" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bot_nav_width"
+        android:layout_alignParentBottom="true">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_navigation_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bot_nav_top"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/menu_main" />
+    </RelativeLayout>
+
+</RelativeLayout>

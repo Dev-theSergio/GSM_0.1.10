@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <NumberPicker
+        android:id="@+id/numberPickerCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:scaleX="1"
+        android:scaleY="0.9" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupInfoDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberPickerCustom"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <RadioButton
+            android:id="@+id/radioInfoDialogMode_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/radio_button_info_dialog_start"
+            android:baselineAligned="false"
+            android:checked="true"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="@string/RadioButtonInfoDialogMode_1"
+            android:textColor="@color/material_gray_600"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioInfoDialogMode_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="-32dp"
+            android:layout_marginEnd="@dimen/radio_button_info_dialog_start"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="@string/RadioButtonInfoDialogMode_2"
+            android:textColor="@color/material_gray_600"
+            android:textStyle="bold" />
+
+     </RadioGroup>
+
+</RelativeLayout>

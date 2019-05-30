@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TimePickerHoloLight" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:buttonBarNeutralButtonStyle">@style/NeutralButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="PickerLight" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:textColorHighlight">@color/colorButton</item>
+        <item name="android:headerBackground">@color/colorButton</item>
+        <item name="android:colorAccent">@color/colorButton</item>
+    </style>
+
+    <style name="NeutralButtonStyle" parent="TextAppearance.AppCompat.Widget.Button.Colored">
+        <item name="android:textColorHighlight">@color/colorButton</item>
+        <item name="android:colorAccent">@color/colorButton</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.ButtonBar.AlertDialog">
+        <item name="android:textColorPrimary">@color/colorButton</item>
+        <item name="android:colorAccent">@color/colorButton</item>
+    </style>
+</resources>

@@ -1,0 +1,252 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.Fragment_3">
+
+    <ScrollView
+        android:id="@+id/ScrollModeSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/fragment_margin_bottom"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/info_layout_between">
+
+            <RelativeLayout
+                android:id="@+id/RelativeScheduleMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/start_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@android:color/transparent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/labelScheduleMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/settings_top_to_view_interval"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:text="@string/ScheduleMode"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="15sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <Switch
+                    android:id="@+id/switchScheduleMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_alignBaseline="@+id/labelScheduleMode"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/background_switch"
+                    android:hapticFeedbackEnabled="true"
+                    android:padding="2dp"
+                    android:shadowRadius="5"
+                    android:track="@drawable/switch_track_selector" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LinearScheduleChannel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_below="@+id/RelativeScheduleMode"
+                android:layout_marginTop="@dimen/start_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@drawable/back_linear_layout_top"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/labelChannelSchedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/ModeChannel"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerSchedule"
+                    style="@android:style/Widget.DropDownItem.Spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelChannelSchedule"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LinearScheduleDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LinearScheduleChannel"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/linear_layout_between_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/labelScheduleDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/WeekDay"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textScheduleWeekDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelScheduleDay"
+                    android:layout_marginTop="@dimen/text_margin_top"
+                    android:layout_marginBottom="@dimen/text_margin_bottom"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/hintPressForEnter"
+                    android:textColor="@color/colorButton" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LinearScheduleTimeOn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LinearScheduleDay"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/linear_layout_between_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/labelScheduleTimeOn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/TimeOfSwitchOn"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textScheduleTimeOn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelScheduleTimeOn"
+                    android:layout_marginTop="@dimen/text_margin_top"
+                    android:layout_marginBottom="@dimen/text_margin_bottom"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/hintPressForEnter"
+                    android:textColor="@color/colorButton" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LinearScheduleTimeOff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LinearScheduleTimeOn"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/linear_layout_between_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:layout_marginBottom="@dimen/start_margin"
+                android:background="@drawable/back_linear_layout_bot">
+
+                <TextView
+                    android:id="@+id/labelScheduleTimeOff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/TimeOfSwitchOff"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textScheduleTimeOff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelScheduleTimeOff"
+                    android:layout_marginTop="@dimen/text_margin_top"
+                    android:layout_marginBottom="@dimen/text_margin_bottom"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/hintPressForEnter"
+                    android:textColor="@color/colorButton" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/RelativeButtonSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_margin_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/buttonScheduleMode"
+            android:layout_width="@dimen/button_width_dual"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/button_margin_start_end"
+            android:layout_marginBottom="@dimen/button_margin_bottom"
+            android:background="@drawable/rounded_button"
+            android:text="@string/TurnOn"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/buttonSchedule"
+            android:layout_width="@dimen/button_width_dual"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/button_margin_start_end"
+            android:layout_marginBottom="@dimen/button_margin_bottom"
+            android:background="@drawable/rounded_button"
+            android:text="@string/Install"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

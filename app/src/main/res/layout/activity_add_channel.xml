@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddEditChannelActivity">
+
+    <!--TextView
+        android:id="@+id/labelAddChannel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/noto_sans"
+        android:gravity="center_vertical"
+        android:text="@string/ModeChannel"
+        android:textColor="@color/colorAddButton"
+        android:textSize="18sp" /-->
+
+
+    <!--com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
+        android:id="@+id/numberPickerAddChannel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelAddChannel"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/number_picker_bg_color"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:persistentDrawingCache="animation"
+        app:snp_buttonPaddingBottom="1dp"
+        app:snp_buttonPaddingLeft="@dimen/snp_buttonPaddingLeftRight"
+        app:snp_buttonPaddingRight="@dimen/snp_buttonPaddingLeftRight"
+        app:snp_buttonTouchScaleFactor="2"
+        app:snp_maxValue="25"
+        app:snp_minValue="4"
+        app:snp_orientation="horizontal"
+        app:snp_scrollEnabled="true"
+        app:snp_stepSize="1"
+        app:snp_updateInterval="10"
+        app:snp_value="4"
+        app:snp_valueMarginEnd="5dp"
+        app:snp_valueMarginStart="5dp"
+        app:snp_value_text_appearance="?android:attr/textAppearanceMedium"
+        app:snp_value_text_color="@color/colorPrimary"
+        app:snp_value_text_size="18sp" /-->
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/editAddChannelNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@string/error_add_channel_number">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="start"
+            android:ems="10"
+            android:hint="@string/hint_add_channel_number"
+            android:inputType="numberDecimal"
+            android:textColorHint="@color/colorPrimary" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!--TextView
+        android:id="@+id/labelChannelDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberPickerAddChannel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/noto_sans"
+        android:gravity="center_vertical"
+        android:text="@string/add_channel_description"
+        android:textColor="@color/colorAddButton"
+        android:textSize="18sp" /-->
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/editAddChannelDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editAddChannelNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="5">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/addEditChannelDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="start"
+            android:ems="10"
+            android:hint="@string/hint_add_channel_description"
+            android:inputType="textCapSentences"
+            android:maxLength="@integer/descMaxLength"
+            android:textColorHint="@color/colorPrimary" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonAddChannelSave"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editAddChannelDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:text="@string/Save"
+        android:textColor="@android:color/background_light"
+        android:textSize="14sp" />
+
+</RelativeLayout>

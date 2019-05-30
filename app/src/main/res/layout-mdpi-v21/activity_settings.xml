@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.kbrs.app.GsmRemoteControl.SettingsActivity">
+
+    <ScrollView
+        android:id="@+id/ScrollSettings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="65dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textSettingsMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/SettingsMode"
+                android:textColor="@color/colorButton"
+                android:textSize="14sp"
+                tools:ignore="RtlSymmetry" />
+
+            <RelativeLayout
+                android:id="@+id/RelativeSilentMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:id="@+id/labelSilentMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/settings_top_to_view_interval"
+                    android:drawableStart="@drawable/ic_silent_mode"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:text="@string/SilentMode"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="15sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <TextView
+                    android:id="@+id/hintSilentMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelSilentMode"
+                    android:layout_alignStart="@+id/labelSilentMode"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_toStartOf="@+id/switchSilentMode"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/SilentModeHint"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="13sp"
+                    android:textStyle="normal"
+                    tools:ignore="RelativeOverlap" />
+
+                <Switch
+                    android:id="@+id/switchSilentMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/background_switch"
+                    android:hapticFeedbackEnabled="true"
+                    android:padding="2dp"
+                    android:shadowRadius="5"
+                    android:track="@drawable/switch_track_selector" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeBackgroundMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_linear_layout_bottom"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:id="@+id/labelBackgroundMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/settings_top_to_view_interval"
+                    android:drawableStart="@drawable/ic_background_24dp"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:text="@string/BackgroundMode"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="15sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <TextView
+                    android:id="@+id/hintBackgroundMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelBackgroundMode"
+                    android:layout_alignStart="@+id/labelBackgroundMode"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="95dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/BackgroundModeHint"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="13sp"
+                    android:textStyle="normal"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/textSettingsPhones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_part_interval"
+                android:background="@drawable/background_linear_layout_top"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/SettingsPhoneNumber"
+                android:textColor="@color/colorButton"
+                android:textSize="14sp"
+                tools:ignore="RtlSymmetry" />
+
+            <RelativeLayout
+                android:id="@+id/LinearGsmNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_layout_between"
+                android:background="@color/white"
+                android:paddingBottom="15dp"
+                tools:ignore="RelativeOverlap">
+
+                <TextView
+                    android:id="@+id/labelGsmHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/settings_top_to_view_interval"
+                    android:drawableStart="@drawable/ic_call_made_24dp"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/labelSPN"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/gsmNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelGsmHeader"
+                    android:layout_alignStart="@+id/labelGsmHeader"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/notInstall"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LinearMasterNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_layout_between"
+                android:background="@drawable/background_linear_layout_bottom"
+                android:paddingBottom="15dp"
+                tools:ignore="RelativeOverlap">
+
+                <TextView
+                    android:id="@+id/labelMasterHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/settings_label_margin"
+                    android:drawableStart="@drawable/ic_call_received_24dp"
+                    android:drawablePadding="15dp"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/labelMPN"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:id="@+id/masterNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelMasterHeader"
+                    android:layout_alignStart="@+id/labelMasterHeader"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/notInstall"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_part_interval"
+                android:background="@drawable/background_linear_layout_top">
+
+                <TextView
+                    android:id="@+id/textSettingsGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/SettingsGroup"
+                    android:textColor="@color/colorButton"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/LinearGroupNumber_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_layout_between"
+                android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:id="@+id/labelGroupNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/settings_start_to_view_interval"
+                    android:drawableStart="@drawable/ic_looks_one_24dp"
+                    android:drawablePadding="15dp"
+                    android:layout_marginTop="@dimen/settings_label_margin"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/labelGPN_1"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textInstallGroupNumber_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelGroupNumber"
+                    android:layout_alignStart="@+id/labelGroupNumber"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/notInstall"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LinearGroupNumber_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_layout_between"
+                android:background="@color/white"
+                android:paddingBottom="15dp"
+                tools:ignore="RelativeOverlap">
+
+                <TextView
+                    android:id="@+id/labelGroupNumber_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/settings_start_to_view_interval"
+                    android:drawableStart="@drawable/ic_looks_two_24dp"
+                    android:drawablePadding="15dp"
+                    android:layout_marginTop="@dimen/settings_label_margin"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/labelGPN_2"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textInstallGroupNumber_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelGroupNumber_2"
+                    android:layout_alignStart="@+id/labelGroupNumber_2"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/notInstall"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LinearGroupNumber_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_layout_between"
+                android:background="@drawable/background_linear_layout_bottom"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingBottom="15dp"
+                tools:ignore="RelativeOverlap">
+
+                <TextView
+                    android:id="@+id/labelGroupNumber_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/settings_start_to_view_interval"
+                    android:drawableStart="@drawable/ic_looks_3_24dp"
+                    android:drawablePadding="15dp"
+                    android:layout_marginTop="@dimen/settings_label_margin"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/labelGPN_3"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textInstallGroupNumber_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelGroupNumber_3"
+                    android:layout_alignStart="@+id/labelGroupNumber_3"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/notInstall"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/textPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_part_interval"
+                android:background="@drawable/background_linear_layout_top"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/SettingsPass"
+                android:textColor="@color/colorButton"
+                android:textSize="14sp"
+                tools:ignore="RtlSymmetry" />
+
+            <RelativeLayout
+                android:id="@+id/LinearPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_layout_between"
+                android:background="@drawable/background_linear_layout_bottom"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingBottom="15dp"
+                tools:ignore="RelativeOverlap">
+
+                <TextView
+                    android:id="@+id/labelPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/settings_top_to_view_interval"
+                    android:drawableStart="@drawable/ic_security_24dp"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/InstallPass"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textInstallPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelPass"
+                    android:layout_alignStart="@+id/labelPass"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/notInstall"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/textSettingsDateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_part_interval"
+                android:background="@drawable/background_linear_layout_top"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/SettingsDateTime"
+                android:textColor="@color/colorButton"
+                android:textSize="14sp"
+                tools:ignore="RtlSymmetry" />
+
+            <RelativeLayout
+                android:id="@+id/LinearTimeSet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_layout_between"
+                android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingBottom="15dp"
+                tools:ignore="RelativeOverlap">
+
+                <TextView
+                    android:id="@+id/labelTimeSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/settings_top_to_view_interval"
+                    android:drawableStart="@drawable/ic_access_time_24dp"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/labelTimeSet"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelTimeSet"
+                    android:layout_alignStart="@+id/labelTimeSet"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/textTimeSet"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LinearDateSet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_layout_between"
+                android:background="@drawable/background_linear_layout_bottom"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingBottom="15dp"
+                tools:ignore="RelativeOverlap">
+
+                <TextView
+                    android:id="@+id/labelDateSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/settings_label_margin"
+                    android:drawableStart="@drawable/ic_date_24dp"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/labelDateSet"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelDateSet"
+                    android:layout_alignStart="@+id/labelDateSet"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/textDateSet"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/textSettingsReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_part_interval"
+                android:background="@drawable/back_linear_layout_top"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/SettingsReset"
+                android:textColor="@color/colorButton"
+                android:textSize="14sp"
+                tools:ignore="RtlSymmetry" />
+
+
+            <RelativeLayout
+                android:id="@+id/LinearFactoryReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_layout_between"
+                android:background="@drawable/back_linear_layout_bot"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:id="@+id/labelFactoryReset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/ic_restore_settings_24dp"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/labelFactoryReset"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="15sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelFactoryReset"
+                    android:layout_alignStart="@+id/labelFactoryReset"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/textFactoryReset"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_navigation_settings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu="@menu/menu_main"
+            app:labelVisibilityMode="labeled"
+            android:background="@drawable/bot_nav_top"/>
+    </RelativeLayout>
+
+</RelativeLayout>

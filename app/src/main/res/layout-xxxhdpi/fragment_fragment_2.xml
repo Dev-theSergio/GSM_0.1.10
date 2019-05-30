@@ -1,0 +1,261 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.Fragment_2">
+
+    <ScrollView
+        android:id="@+id/ScrollModeCyc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/fragment_margin_bottom"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/info_layout_between">
+
+            <RelativeLayout
+                android:id="@+id/LinearCycChannel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/start_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@drawable/back_linear_layout_top">
+
+                <TextView
+                    android:id="@+id/labelChannelCyc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/ModeChannel"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerCycChannel"
+                    style="@android:style/Widget.DropDownItem.Spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelChannelCyc"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LinearCycReplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LinearCycChannel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/linear_layout_between_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@color/white"
+                android:paddingStart="@dimen/linear_layout_start_end_padding"
+                android:paddingEnd="@dimen/linear_layout_start_end_padding">
+
+                <TextView
+                    android:id="@+id/labelCycReplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/QuantityOfRepeat"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
+                    android:id="@+id/numberPickerCycReplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelCycReplay"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/number_picker_margin"
+                    android:layout_marginBottom="@dimen/number_picker_margin"
+                    android:background="@drawable/number_picker_bg_color"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:snp_buttonPaddingBottom="1dp"
+                    app:snp_buttonPaddingLeft="40dp"
+                    app:snp_buttonPaddingRight="40dp"
+                    app:snp_buttonTouchScaleFactor="2"
+                    app:snp_maxValue="126"
+                    app:snp_minValue="1"
+                    app:snp_orientation="horizontal"
+                    app:snp_scrollEnabled="false"
+                    app:snp_stepSize="1"
+                    app:snp_updateInterval="10"
+                    app:snp_value="1"
+                    app:snp_valueMarginEnd="5dp"
+                    app:snp_valueMarginStart="5dp"
+                    app:snp_value_text_appearance="?android:attr/textAppearanceMedium"
+                    app:snp_value_text_color="@color/colorButton"
+                    app:snp_value_text_size="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LinearCycWorkingTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LinearCycReplay"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/linear_layout_between_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/linear_layout_start_end_padding"
+                android:paddingEnd="@dimen/linear_layout_start_end_padding">
+
+                <TextView
+                    android:id="@+id/labelCycWorkingTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/TimeOfWork"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textCycWorkingTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelCycWorkingTime"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/text_margin_top"
+                    android:layout_marginBottom="@dimen/text_margin_bottom"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/hintPressForEnter"
+                    android:textColor="@color/colorButton" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LinearCycInterval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LinearCycWorkingTime"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/linear_layout_between_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/linear_layout_start_end_padding"
+                android:paddingEnd="@dimen/linear_layout_start_end_padding">
+
+                <TextView
+                    android:id="@+id/labelCycIntervalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/start_margin_label"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/PeriodOfRepeat"
+                    android:textColor="@color/material_gray_600"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textCycIntervalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelCycIntervalTime"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/text_margin_top"
+                    android:layout_marginBottom="@dimen/text_margin_bottom"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/hintPressForEnter"
+                    android:textColor="@color/colorButton" />
+
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LinearCycInterval"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/linear_layout_start_end_padding"
+                android:layout_marginTop="@dimen/linear_layout_between_margin"
+                android:layout_marginEnd="@dimen/linear_layout_start_end_padding"
+                android:background="@drawable/back_linear_layout_bot"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <RadioButton
+                    android:id="@+id/radioCycOn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/radio_button_start"
+                    android:layout_weight="1"
+                    android:baselineAligned="false"
+                    android:checked="true"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/RadioButtonOn"
+                    android:textColor="@color/material_gray_600"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radioCycOff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="-32dp"
+                    android:layout_marginEnd="@dimen/radio_button_start"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/RadioButtonOff"
+                    android:textColor="@color/material_gray_600"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/RelativeButtonCyc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_margin_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/buttonCycSend"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/button_margin_bottom"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:text="@string/Send"
+            android:textColor="@android:color/background_light"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
